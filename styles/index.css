@@ -1,7 +1,7 @@
 
 body{
     margin: 0px;
-    font-family: Lato
+    font-family: Lato;
 }
 
 /* Announcement Section */
@@ -23,6 +23,7 @@ nav {
     box-shadow: 0 1px 5px #ababab;
     padding: 13px 50px;
     background-color: white;
+    margin-bottom: 10px;
 }
 nav > div{
     display: flex;
@@ -31,9 +32,11 @@ nav > div{
 }
 nav > div > img{
     width: 85px;
+    cursor: pointer;
 }
 nav > div > div >img{
     width: 22px;
+    cursor: pointer;
 }
 nav > div > div:first-of-type > *{
     margin: 0px 15px;
@@ -140,6 +143,102 @@ nav>div>div:first-of-type>span {
 
 nav>div>div:first-of-type>span:hover .dropdown-content2{display: block;}
 
+nav > div > div:first-of-type a {
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+nav > div > div:first-of-type a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav > div > div:first-of-type a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.cart-panel {
+    position: fixed;
+    height: 100vh;
+    width:400px;
+    right: -560px;
+    top:0;
+    backdrop-filter: blur(5px);
+    background: white;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.open {
+    right: 0  !important;
+}
+.hide {
+    visibility: hidden  !important;
+}
+
+
+.cart-header > h4 {
+    font-weight: normal;
+}
+.cart-header > button {
+    border:none;
+    outline:none;
+    box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
+    background: linear-gradient(#C7D3DC, #5B798E);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    -webkit-transition: all 0.3s linear;
+    background-size: 1px 200px;
+}
+.cart-header > button:hover {
+    background-position: 100px;
+}
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+}
+#carttop {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF0000;
+    padding: 0px 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+#carttop p{
+    margin: 12px;
+}
+#carttop button{
+    border: 0;
+    background-color: #FF0000;
+    color: white;
+    cursor: pointer;
+    padding-top: 5px;
+}
+#ribbon {
+    background-color: black;
+    color: white;
+}
+#ribbon p{
+    margin: 0px;
+    padding: 9px 15px;
+    font-size: 12px;
+}
+
+
 /* Main Section */
 
 #main{
@@ -150,7 +249,7 @@ nav>div>div:first-of-type>span:hover .dropdown-content2{display: block;}
     display: flex;
     background-color: #e8edf0;
     justify-content: space-around;
-    margin: 10px 0px;
+    margin-bottom: 10px;
     padding: 0px 55px 0px 20px;
 }
 #main > div:first-of-type div{
@@ -264,6 +363,156 @@ nav>div>div:first-of-type>span:hover .dropdown-content2{display: block;}
   to {opacity: 1}
 }
 
+/* best of boAt */
+
+#main > div:nth-of-type(3) > p:first-of-type{
+    font-weight: 900;
+    font-size: larger;
+    margin-bottom: 40px;
+}
+#main > div:nth-of-type(3) > p:last-of-type{
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-align: right;
+}
+#main > div:nth-of-type(3) > div:first-of-type{
+    display: flex;
+    overflow: scroll;
+}
+#main > div:nth-of-type(3) > div::-webkit-scrollbar {
+    display: none;
+}
+#main > div:nth-of-type(3) > div:first-of-type > div:first-of-type{
+    background-color:black;
+    color: white;
+    font-weight: 900;
+}
+#main > div:nth-of-type(3) > div:first-of-type > div{
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    background-color: #e3e3e3;
+    padding: 3px 5px 5px 5px;
+    min-width: 129px;
+    text-align: center;
+    margin-right: 50px;
+}
+#bestBoat{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:20px;
+    overflow: scroll;
+}
+#bestBoat::-webkit-scrollbar {
+    display: none;
+}
+#bestBoat > div{
+    background-color: #e3e3e3;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+#bestBoat > div img{
+    width: 160px;
+    display: block;
+    margin: auto;
+    margin-bottom: -40px;
+}
+#bestBoat > div > span{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px;
+    align-self: flex-start;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    white-space: nowrap;
+}
+
+#bestBoat > div span svg{
+    margin-bottom: -4px;
+}
+
+#bestBoat > div > div{
+    margin: 5px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#bestBoat > div > div:first-of-type{
+    display: inline-block;
+    border-radius: 50%;
+    padding: 0px;
+    padding-top:8px;
+    border:4px solid #ffa41c;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    height: 40.5px;
+    width: 48.5px;
+    align-self: flex-end
+}
+
+#bestBoat > div > div:last-of-type:first-child{
+    margin: 0px;
+    font-weight: 600;
+}
+#bestBoat > div div{
+    display: flex;
+    gap:7px
+}
+#bestBoat > div > div:last-of-type > div:first-of-type{
+    border-bottom: 1px solid lightgray;
+}
+#bestBoat > div > div:last-of-type > p:first-of-type{
+    font-weight: 600;
+    margin: 0px;
+    margin-bottom: -10px;
+}
+#bestBoat > div > div:last-of-type > div:first-of-type > p:nth-of-type(1){
+    font-weight: 600;
+    margin: 12px 0px;
+}
+#bestBoat > div > div:last-of-type > div:first-of-type > p:nth-of-type(2){
+    color: #05A143;
+    margin: 12px 0px;
+}
+#bestBoat > div > div:last-of-type > div:first-of-type > p:nth-of-type(3){
+    margin: 12px 0px;
+    font-size: 10px;
+    padding-top: 5px;
+}
+#bestBoat > div > div:last-of-type > div:last-of-type {
+    align-items: center;
+}
+#bestBoat > div > div:last-of-type > div:last-of-type > p:first-of-type{
+    font-size: 11px;
+    border-right: 1px solid lightgray;
+    margin: 0px;
+    padding-right: 10px;
+}
+#bestBoat > div > div:last-of-type > div:last-of-type > p:last-of-type{
+    font-size: 11px;
+    padding-right: 10px;
+    margin: 0px;
+}
+#bestBoat > div > div:last-of-type > p:last-of-type{
+    font-size: 11px;
+    margin: 0px;
+}
+#bestBoat > div > div:last-of-type > button{
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    background-color: #F7C20A;
+    padding: 8px 12px;
+    cursor: pointer;
+}
 
 /* Footer Section */
 footer > div:first-of-type{
@@ -380,9 +629,6 @@ footer hr{
 /* Media Queries */
 @media screen and (max-width:1199px) {
     nav > div > div {
-        display: none;
-    }
-    nav > div > div:last-of-type > img:first-of-type{
         display: none;
     }
     nav > div > div:last-of-type{
