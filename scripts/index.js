@@ -309,6 +309,9 @@ function updateCart(){
   a1.setAttribute("href","index.html")
   var btn1 = document.createElement("button")
   btn1.textContent = "PLACE ORDER"
+  btn1.addEventListener("click",function(){
+    window.location.href = "payment.html";
+  })
   div.append(pdiv1,pdiv2,a1,btn1)
 
   document.getElementById("cctotal").append(div)
