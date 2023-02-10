@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Buy Earbuds, Headphones, Earphones at India’s No.1 Earwear Brand: boAt
+    </title>
+    <link rel="icon" href="images/boatfavcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        
+body{
+    margin: 0px;
+    font-family: Lato;
+}
+
+/* Announcement Section */
+#announce {
+    background-color: black;
+    padding: 8px 0px 10px 0px;
+}
+#announce > p{
+    margin: 0px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+/* Nav Section */
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 5px #ababab;
+    padding: 13px 50px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+nav > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav > div > img{
+    width: 85px;
+    cursor: pointer;
+}
+nav > div > div >img{
+    width: 22px;
+    cursor: pointer;
+}
+nav > div > div:first-of-type > *{
+    margin: 0px 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+nav > div > div:first-of-type{
+    margin-right:55px;
+}
+nav > div > div:first-of-type > span > a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+nav > div > div:last-of-type {
+    display: flex;
+    align-items: center;
+}
+nav > div > div:last-of-type > *{
+    margin: 0px 10px;
+}
+nav > div > div:last-of-type > input{
+    border: none;
+    background-color: #eaeaea;
+    border-radius: 2em;
+    padding: 11px 55px;
+}
+#errspan {
+    margin-right: -40px;
+    z-index: 2;
+    color: rgb(135, 135, 135);
+}
+nav .fa-bars {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: white;
+}
+.show2 {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    background-color: white;
+    right:10px;
+    top: 80px;
+    border: 3px solid lightgray;
+    padding: 10px;
+}
+.show2 p{
+    color: #FF0000;
+    font-weight: 600;
+    margin-top: 0px;
+}
+.show2 a{
+    background-color: #FF0000;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 190px;
+    padding: 40px 30px 30px 30px;
+    margin-left: -40px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 40px 20px 5px 20px;
+    margin-left: -230px;
+}
+
+.show3{
+    display:block;
+}
+
+.dropdown-content div{
+    padding: 3px 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor:pointer;
+}
+.dropdown-content div > p{
+    margin-top: 0px;
+    text-align: center;
+}
+.dropdown-content div > img{
+    width:100px;
+    margin:auto;
+}
+
+nav > div > div:first-of-type span:hover .dropdown-content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 40px 20px 5px 20px;
+    margin-left: -230px;
+    margin-top: 20px;
+}
+
+nav>div>div:first-of-type>span {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0px;
+}
+
+
+.dropdown-content2 a {
+  color: black;
+  font-weight: 400;
+  padding: 5px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+nav>div>div:first-of-type>span:hover .dropdown-content2{display: block;}
+
+nav > div > div:first-of-type a {
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+nav > div > div:first-of-type a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav > div > div:first-of-type a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Cart Section */
+
+.cart-panel {
+    position: fixed;
+    height: 100vh;
+    width:400px;
+    right: -560px;
+    top:0;
+    backdrop-filter: blur(5px);
+    background: white;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.open {
+    right: 0  !important;
+}
+.hide {
+    visibility: hidden  !important;
+}
+
+
+.cart-header > h4 {
+    font-weight: normal;
+}
+.cart-header > button {
+    border:none;
+    outline:none;
+    box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
+    background: linear-gradient(#C7D3DC, #5B798E);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    -webkit-transition: all 0.3s linear;
+    background-size: 1px 200px;
+}
+.cart-header > button:hover {
+    background-position: 100px;
+}
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    overflow: auto;
+    overflow-x:hidden;
+}
+#carttop {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF0000;
+    padding: 0px 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+#carttop p{
+    margin: 12px;
+}
+#carttop button{
+    border: 0;
+    background-color: #FF0000;
+    color: white;
+    cursor: pointer;
+    padding-top: 5px;
+}
+#ribbon {
+    background-color: black;
+    color: white;
+}
+#ribbon p{
+    margin: 0px;
+    padding: 9px 15px;
+    font-size: 12px;
+}
+.icontain {
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+.icontain p{
+    margin: 5px 0px;
+}
+.icontain > img:first-of-type{
+    height: 92px;
+}
+.icontain > div{
+    margin-left: 20px;
+    flex-grow: 1;
+}
+.icontain > div >p:first-of-type{
+    font-weight: 600;
+}
+.icontain > div > p:nth-of-type(2){
+    color: #FF0000;
+    font-weight: 600;
+    font-size: 13px;
+}
+.icontain > div > p:nth-of-type(2) > span{
+    font-weight: 100;
+    color: black;
+    font-size: 10px;
+    text-decoration: line-through;
+     margin-left: 5px;
+}
+.icontain > div > p:nth-of-type(3)>span:nth-of-type(2){
+    display: inline-block;
+    margin: 0px 10px;
+    font-weight: 600;
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+}
+.icontain > div > p:nth-of-type(3)>span:first-of-type{
+    display: inline-block;
+    color: #FF0000;
+    border-radius: 50%;
+    border: 1px solid black;
+    line-height :16px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+}
+.icontain > div > p:nth-of-type(3)>span:last-of-type{
+    display: inline-block;
+    color: #FF0000;
+    border-radius: 50%;
+    border: 1px solid black;
+    line-height :16px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+.icontain > img:last-of-type{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+#cctotal {
+    box-shadow: 0 -6px 7px #dfdfdfb8;
+    z-index: 3;
+}
+#cctotal > div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+#cctotal > div > div{
+    display: flex;
+    justify-content: space-between;
+}
+#cctotal > div p{
+    padding: 0px 10px;
+    margin: 5px 0px;
+    font-weight: 600;
+}
+#cctotal > div a{
+    color: #FF0000;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+#cctotal  button{
+    align-self: center;
+    margin-top: 10px;
+    width: 90%;
+    background-color: #FF0000;
+    border: 0;
+    padding: 15px 0px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Footer Section */
+footer > div:first-of-type{
+    background-color: black;
+    padding: 17px 0px;
+}
+
+footer > div:first-of-type > p{
+    color: white;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    line-height: 17px;
+}
+
+footer > div:nth-of-type(2){
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    padding: 30px 40px;
+    font-size: 13px;
+    color: gray;
+}
+footer > div:nth-of-type(2)  img{
+    width: 85px;
+}
+footer > div:nth-of-type(2) > div:first-of-type> p{
+    width: 85%;
+}
+footer > div:nth-of-type(2) > div:first-of-type > span{
+    border: 1px solid rgb(254, 5, 0);
+    border-radius: 5px;
+    width: 95%;
+}
+footer > div:nth-of-type(2) > div:first-of-type > span > button{
+    border: 0;
+    background-color: #EE1D24;
+    color: white;
+    margin: 5px;
+    padding: 12px 25px; 
+    border-radius: 5px;
+    font-weight: 800;
+}
+footer > div:nth-of-type(2) > div:first-of-type > span > input{
+    border: 0;
+    width: 100%;
+}
+footer > div:nth-of-type(2) > div:first-of-type > span > input::placeholder{
+    padding-left: 20px;
+}
+footer > div:nth-of-type(2)>div span{
+    display: flex;
+}
+footer > div:nth-of-type(2) > div > p:first-child{
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+}
+footer > div:nth-of-type(2)>div li{
+    padding-bottom: 15px;
+    padding-right: 20px;
+}
+footer > div:nth-of-type(2)>div ul:first-of-type{
+    border-right: 1px solid lightgray;
+}
+footer > div:nth-of-type(2)>div{
+    border-right: 1px solid lightgray;
+    margin: 0px 20px;
+}
+
+footer > div:nth-of-type(3){
+    display: flex;
+    padding:0px 40px;
+}
+footer > div:nth-of-type(3) > span i{
+    width: 55px;
+    padding: 10px 0px;
+}
+footer > div:nth-of-type(4){
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+}
+footer > div:nth-of-type(4) >div:first-of-type > img{
+    width: 150px;
+}
+footer > div:nth-of-type(4) >div:last-of-type > img{
+    width: 410px;
+}
+
+footer > div:nth-of-type(2) > div ul {
+    list-style-type: none;
+    padding:0px;
+    margin-right: 20px;
+}
+
+footer > div:last-of-type{
+    padding: 0px 40px;
+    padding-bottom: 60px;
+    font-size: 13px;
+}
+footer > div:last-of-type > p{
+    padding: 10px 0px;
+}
+footer > div:last-of-type p span{
+    font-weight: 600;
+}
+footer hr{
+    border-top:1px solid lightgray;
+}
+
+
+/* Media Queries */
+@media screen and (max-width:1199px) {
+    nav > div > div {
+        display: none;
+    }
+    nav > div > div:last-of-type{
+        width: 100%;
+        justify-content: flex-end;
+        margin-left: 20px;
+    }
+    nav > div > div:last-of-type > input{
+        width: 70%;
+    }
+    nav .fa-bars {
+        display: inline;
+        margin-left: -30px;
+        margin-right: 20px;
+        scale: 1.5;
+    }
+    footer > div:nth-of-type(2){
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:740px) {
+    footer > div:nth-of-type(2){
+        grid-template-columns: 1fr;
+    }
+    footer > div:nth-of-type(4){
+        flex-direction: column;
+    }
+    footer > div:nth-of-type(4) >div:last-of-type > img{
+        width: 100%;
+    }
+}
+
+    #main > div{
+        width: 40%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #main  p{
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0px;
+        line-height: 22px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    #main button{
+        margin: 20px;
+    }
+    #main input{
+        border-radius: 15px;
+        border: 1px dotted purple ;
+        background-color: #f3f2ff;
+        padding: 5px 10px;
+    }
+    #main button{
+        border: 0;
+        background-color: #FF0000;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #main > button:first-of-type{
+        width: 150px;
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="cart-panel" id="ccpanel">
+        <div id="carttop">
+            <p>Your Cart(<span id="itemcount">1</span> items)</p>
+            <button id="close-panel">
+                <svg focusable="false" width="14" height="14"   class="icon icon--close" viewBox="0 0 14 14">
+                    <path d="M13 13L1 1M13 1L1 13" stroke="currentColor" stroke-width="2" fill="none"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="ribbon">
+            <p>Free Shipping sitewide | Delivery might be delayed due to high demand from the past few days.</p>
+        </div>
+        <div class="cart-content" id="cc">
+            
+        </div>
+        <div id="cctotal">
+
+        </div>
+    </div>
+    <header>
+        <div id="announce">
+            <p>Maximum immersion for your entertainment with Aavante Bar 1680D. Shop NOW!</p>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <i class="fa-solid fa-bars"></i>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/boat_logo_small.webp?v=1672379935" alt="logo" onclick="showMain()">
+            <div>
+                <span>
+                    <a href="#" onclick="showDiv()" class="dropbtn">CATEGORIES</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div onclick="goToWL()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_100x.png?v=1663752600" alt="">
+                            <p>Airdopes True Wireless</p>
+                        </div>
+                        <div onclick="goToWH()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_100x.png?v=1663752867" alt="">
+                            <p>Rockerz Wireless</p>
+                        </div>
+                        <div onclick="goToW()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_100x.jpg?v=1675683311" alt="">
+                            <p>Smart Watches</p>
+                        </div>
+                        <div onclick="goToBW()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_100x.png?v=1663753167" alt="">
+                            <p>Bassheads Wired</p>
+                        </div>
+                        <div onclick="goToSS()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_100x.png?v=1663753243" alt="">
+                            <p>Stone Speakers</p>
+                        </div>
+                        <div onclick="goToAH()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_100x.png?v=1663753280" alt="">
+                            <p>Aavante Home Audio</p>
+                        </div>
+                        <div onclick="goToMA()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_100x.jpg?v=1675683444" alt="">
+                            <p>Mobile Accessories</p>
+                        </div>
+                        <div onclick="goToW()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_100x.png?v=1675683871" alt="">
+                            <p>Trebel for Women</p>
+                        </div>
+                        <div onclick="goToLE()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_100x.png?v=1675683940" alt="">
+                            <p>Limited Edition</p>
+                        </div>
+                        <div onclick="goToT()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_100x.png?v=1663753379" alt="">
+                            <p>Misfit Trimmers</p>
+                        </div>
+                        <div onclick="goToIG()">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_100x.png?v=1663753419" alt="">
+                            <p>Immortal Gaming</p>
+                        </div>
+                    </div>
+                </span>
+                <a href="#">DAILY DEALS</a>
+                <a href="#">GIFT WITH BOAT</a>
+                <span>
+                    <a href="#">MORE</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="dropdown-content2">
+                        <a href="advertise.html">Do What Floats Your boAt</a>
+                        <a href="blogs.html
+                        ">Blogs</a>
+                        <a href=" bulkorder.html">Corporate Orders</a>
+                        <a href="">Earn ₹100</a>
+                        <a href="">Careers</a>
+                        <a href="">Social Responsibility</a>
+                        <a href="">Meet the boAtheads</a>
+                      </div>
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="errspan"></i>
+                <input type="text" placeholder="Search">
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Profile-1.png?v=1663762989" alt="profile" onclick="showLogin()">
+                <div class="show2">
+                    <p>Hi boAthead!</p>
+                    <a href="login.html">Login</a>
+                </div>
+                <img class="toggle-btn" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Cart_7e68f099-c0bf-4966-a9ef-14d1a3af07ad.png?v=1673260730" alt="cart" id="open-panel"> 
+            </div>
+        </div>
+    </nav>
+    <div id="main">
+        <div>
+            <p>Enter Your Name</p>
+            <input type="text" id="name" placeholder="Enter your name">
+            <p>Enter Your Address</p>
+            <input type="text" id="add" placeholder="Enter your address">
+            <p>Enter Your Mobile number</p>
+            <input type="number" id="mnum" placeholder="Enter your mobile number">
+            <div>
+                <button onclick="tellOTP()">Get OTP</button>
+                <input type="number" id="OTP">
+            </div>
+            <p>Enter Your Credit Card Number</p>
+            <input maxlength="3" type="number" id="credit" placeholder="Credit Card Num">
+            <p>Security Code</p>
+            <input type="number" id="cvv" placeholder="Enter CVV">
+            <p>Do you have any discount coupons?</p>
+            <input type="text" id="dcode" placeholder="Discount Coupon">
+            <button onclick="check()">Purchase</button>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home audio. From workouts to adventures, boAt will get you sailing!</p>
+        </div>
+        <div>
+            <div style="border:0">
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5.png?v=1661838672" alt="logo">
+                <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+                <span>
+                    <input type="text" id="email" placeholder="Email Address*">
+                    <button>SUBSCRIBE</button>
+                </span>
+            </div>
+            <div>
+                <p>SHOP</p>
+                <span>
+                    <ul>
+                        <li>True Wireless Earbuds</li>
+                        <li>Wired Headphones</li>
+                        <li>Home Audio</li>
+                        <li>Smart Watches</li>
+                        <li>Misfit</li>
+                        <li>Rock In India</li>
+                    </ul>
+                    <ul>
+                        <li>Wireless Headphones</li>
+                        <li>Wireless Speakers</li>
+                        <li>Mobile Accessories</li>
+                        <li>TRebel</li>
+                        <li>Gift Card</li>
+                        <li>Earn 100</li>
+                    </ul>
+                </span>     
+            </div>
+            <div>
+                <p>HELP</p>
+                <span>
+                    <ul>
+                        <li>Track Your Order</li>
+                        <li>Return Policy</li>
+                        <li>Bulk Orders</li>
+                        <li>Smart Watches</li>
+                        <li>Why Buy Online</li>
+                    </ul>
+                    <ul>
+                        <li>Warranty & Support</li>
+                        <li>Service Centers</li>
+                        <li>FAQs</li>
+                    </ul>
+                </span>  
+            </div>
+            <div style="border:0">
+                <p>COMPANY</p>
+                <ul style="border:0">
+                    <li>About BoAt</li>
+                    <li>News</li>
+                    <li>Read Our Blog</li>
+                    <li>Careers</li>
+                    <li>Security</li>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                    <li>Investors Relations</li>
+                    <li>Social Responsibility</li>
+                    <li>Warranty Policy</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <span>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+        </div>
+        <hr>
+        <div>
+            <div>
+                <p>Download the App</p>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play-store_new.png?v=1666071594" alt="gplay">
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store_new_96c42e79-8764-4292-885a-dc793dde4655.png?v=1666071566" alt="apple">    
+            </div>
+            <div>
+                <p>We Accept</p>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/g_54cc0f26-12a4-4bd1-adca-676746073e7a_617x.png?v=1674109066" alt="logos">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p>© 2023 Imagine Marketing Limited. All Rights Reserved.</p>
+            <p>
+                <span>For queries contact us:</span>
+                Manager, Imagine Marketing Limited Unit no. 204 & 205, 2nd floor, D-wing & E-wing,<br>
+                Corporate Avenue, Andheri Ghatkopar Link Road, Mumbai, Maharashtra-400093, India
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<script src="https://kit.fontawesome.com/4d1e521af4.js" crossorigin="anonymous"></script>
+<script>
+    function check(){
+        var name = document.getElementById("name").value
+        var add = document.getElementById("add").value
+        var mnum = document.getElementById("mnum").value
+        var otp = document.getElementById("OTP").value
+        var ccn = document.getElementById("credit").value
+        var cvv = document.getElementById("cvv").value
+        var dcode = document.getElementById("dcode").value
+
+        if(name==""||add==""||mnum==""||otp==""||ccn==""||cvv==""){
+            alert("Please enter correct details")
+        }
+        if(otp!="7273"){
+            alert("wrong OTP")
+        }
+        alert("Thank you for the purchase :)")
+    }
+
+    function tellOTP(){
+        alert("The OTP is 7273")
+    }
+</script>
