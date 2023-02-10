@@ -240,6 +240,8 @@ nav > div > div:first-of-type a:hover:after {
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
+    overflow: auto;
+    overflow-x:hidden;
 }
 #carttop {
     display: flex;
@@ -342,6 +344,7 @@ nav > div > div:first-of-type a:hover:after {
 }
 #cctotal {
     box-shadow: 0 -6px 7px #dfdfdfb8;
+    z-index: 3;
 }
 #cctotal > div{
     display: flex;
