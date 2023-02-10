@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recover Your Password</title>
+    <link rel="stylesheet" href="styles/forgetpw.css" />
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXaMC_FsrP_Y34fbCX39dShMOJXApoUlaG7A&usqp=CAU"
+    />
+  </head>
+  <body>
+    <!-- this is header part -->
+    <div class="cart-panel" id="ccpanel">
+      <div id="carttop">
+          <p>Your Cart(<span id="itemcount">1</span> items)</p>
+          <button id="close-panel">
+              <svg focusable="false" width="14" height="14"   class="icon icon--close" viewBox="0 0 14 14">
+                  <path d="M13 13L1 1M13 1L1 13" stroke="currentColor" stroke-width="2" fill="none"></path>
+              </svg>
+          </button>
+      </div>
+      <div id="ribbon">
+          <p>Free Shipping sitewide | Delivery might be delayed due to high demand from the past few days.</p>
+      </div>
+      <div class="cart-content" id="cc">
+          
+      </div>
+      <div id="cctotal">
+
+      </div>
+  </div>
+  <header>
+      <div id="announce">
+          <p>Maximum immersion for your entertainment with Aavante Bar 1680D. Shop NOW!</p>
+      </div>
+  </header>
+  <nav>
+      <div>
+          <i class="fa-solid fa-bars"></i>
+          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/boat_logo_small.webp?v=1672379935" alt="logo" onclick="showMain()">
+          <div>
+              <span>
+                  <a href="#" onclick="showDiv()" class="dropbtn">CATEGORIES</a>
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div id="myDropdown" class="dropdown-content">
+                      <div onclick="goToWL()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_100x.png?v=1663752600" alt="">
+                          <p>Airdopes True Wireless</p>
+                      </div>
+                      <div onclick="goToWH()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_100x.png?v=1663752867" alt="">
+                          <p>Rockerz Wireless</p>
+                      </div>
+                      <div onclick="goToW()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_100x.jpg?v=1675683311" alt="">
+                          <p>Smart Watches</p>
+                      </div>
+                      <div onclick="goToBW()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_100x.png?v=1663753167" alt="">
+                          <p>Bassheads Wired</p>
+                      </div>
+                      <div onclick="goToSS()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_100x.png?v=1663753243" alt="">
+                          <p>Stone Speakers</p>
+                      </div>
+                      <div onclick="goToAH()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_100x.png?v=1663753280" alt="">
+                          <p>Aavante Home Audio</p>
+                      </div>
+                      <div onclick="goToMA()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_100x.jpg?v=1675683444" alt="">
+                          <p>Mobile Accessories</p>
+                      </div>
+                      <div onclick="goToW()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_100x.png?v=1675683871" alt="">
+                          <p>Trebel for Women</p>
+                      </div>
+                      <div onclick="goToLE()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_100x.png?v=1675683940" alt="">
+                          <p>Limited Edition</p>
+                      </div>
+                      <div onclick="goToT()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_100x.png?v=1663753379" alt="">
+                          <p>Misfit Trimmers</p>
+                      </div>
+                      <div onclick="goToIG()">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_100x.png?v=1663753419" alt="">
+                          <p>Immortal Gaming</p>
+                      </div>
+                  </div>
+              </span>
+              <a href="#">DAILY DEALS</a>
+              <a href="#">GIFT WITH BOAT</a>
+              <span>
+                  <a href="#">MORE</a>
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div class="dropdown-content2">
+                      <a href="advertise.html">Do What Floats Your boAt</a>
+                      <a href="blogs.html
+                      ">Blogs</a>
+                      <a href=" bulkorder.html">Corporate Orders</a>
+                      <a href="">Earn ₹100</a>
+                      <a href="">Careers</a>
+                      <a href="">Social Responsibility</a>
+                      <a href="">Meet the boAtheads</a>
+                    </div>
+              </span>
+          </div>
+          <div>
+              <i class="fa-solid fa-magnifying-glass" id="errspan"></i>
+              <input type="text" placeholder="Search">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Profile-1.png?v=1663762989" alt="profile" onclick="showLogin()">
+              <div class="show2">
+                  <p>Hi boAthead!</p>
+                  <a href="login.html">Login</a>
+              </div>
+              <img class="toggle-btn" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Cart_7e68f099-c0bf-4966-a9ef-14d1a3af07ad.png?v=1673260730" alt="cart" id="open-panel"> 
+          </div>
+      </div>
+  </nav>
+
+<script src="https://kit.fontawesome.com/4d1e521af4.js" crossorigin="anonymous"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- this is middle part -->
+
+
+
+
+    <div id="container">
+      <!-- This is for Heading -->
+      <div class="heading">
+        <h1>Recover password</h1>
+        <p>Please enter your e-mail:</p>
+      </div>
+
+      <!-- This is for inputs -->
+      <div class="inputs">
+        <input type="email" placeholder="E-mail" />
+        <button>RECOVER</button>
+        <p>
+          Remember your password? <a href="login.html">Back to login</a>
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- this is for footer part -->
+
+    <footer>
+      <div>
+        <p>
+          India's fastest growing audio & wearables brand. The most incredible
+          range of wireless earphones, earbuds, headphones, smart watches, and
+          home audio. From workouts to adventures, boAt will get you sailing!
+        </p>
+      </div>
+      <div>
+        <div style="border: 0">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5.png?v=1661838672"
+            alt="logo"
+          />
+          <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+          <span>
+            <input type="text" id="email" placeholder="Email Address*" />
+            <button>SUBSCRIBE</button>
+          </span>
+        </div>
+        <div>
+          <p>SHOP</p>
+          <span>
+            <ul>
+              <li>True Wireless Earbuds</li>
+              <li>Wired Headphones</li>
+              <li>Home Audio</li>
+              <li>Smart Watches</li>
+              <li>Misfit</li>
+              <li>Rock In India</li>
+            </ul>
+            <ul>
+              <li>Wireless Headphones</li>
+              <li>Wireless Speakers</li>
+              <li>Mobile Accessories</li>
+              <li>TRebel</li>
+              <li>Gift Card</li>
+              <li>Earn 100</li>
+            </ul>
+          </span>
+        </div>
+        <div>
+          <p>HELP</p>
+          <span>
+            <ul>
+              <li>Track Your Order</li>
+              <li>Return Policy</li>
+              <li>Bulk Orders</li>
+              <li>Smart Watches</li>
+              <li>Why Buy Online</li>
+            </ul>
+            <ul>
+              <li>Warranty & Support</li>
+              <li>Service Centers</li>
+              <li>FAQs</li>
+            </ul>
+          </span>
+        </div>
+        <div style="border: 0">
+          <p>COMPANY</p>
+          <ul style="border: 0">
+            <li>About BoAt</li>
+            <li>News</li>
+            <li>Read Our Blog</li>
+            <li>Careers</li>
+            <li>Security</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+            <li>Investors Relations</li>
+            <li>Social Responsibility</li>
+            <li>Warranty Policy</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <span>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </span>
+      </div>
+      <hr />
+      <div>
+        <div>
+          <p>Download the App</p>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play-store_new.png?v=1666071594"
+            alt="gplay"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store_new_96c42e79-8764-4292-885a-dc793dde4655.png?v=1666071566"
+            alt="apple"
+          />
+        </div>
+        <div>
+          <p>We Accept</p>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/g_54cc0f26-12a4-4bd1-adca-676746073e7a_617x.png?v=1674109066"
+            alt="logos"
+          />
+        </div>
+      </div>
+      <hr />
+      <div>
+        <p>© 2023 Imagine Marketing Limited. All Rights Reserved.</p>
+        <p>
+          <span>For queries contact us:</span>
+          Manager, Imagine Marketing Limited Unit no. 204 & 205, 2nd floor,
+          D-wing & E-wing,<br />
+          Corporate Avenue, Andheri Ghatkopar Link Road, Mumbai,
+          Maharashtra-400093, India
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+<script src="scripts/forgetpw.js"></script>
+
+
+
