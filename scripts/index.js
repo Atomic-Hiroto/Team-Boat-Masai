@@ -172,6 +172,7 @@ function displayBest(l){
       elem.quan = 1
       boatcart.push(elem)
       localStorage.setItem("boat-cart",JSON.stringify(boatcart))
+      updateCart()
     })
 
     innerdiv.append(p1,idiv1,idiv2,p7,btn)
@@ -179,6 +180,13 @@ function displayBest(l){
     document.getElementById("bestBoat").append(div);
   })
 }
+
+// show login div
+function showLogin() {
+  document.querySelector(".show2").classList.toggle("show3");
+}
+
+
 
 /* show cart sliding div */
 let openPanelButton = document.getElementById("open-panel");
@@ -202,8 +210,7 @@ closePanelButton.onclick = () => {
 
 function updateCart(){
   document.getElementById("cc").textContent = ""
-  var bcart = JSON.parse(localStorage.getItem("boat-cart")) || []
-  if(bcart.length==0){
+  if(boatcart.length==0){
     var p = document.createElement("p")
     p.textContent = "Your cart is empty"
     p.style.textAlign = "center"
@@ -221,22 +228,134 @@ function updateCart(){
     btn.style.fontWeight = "600"
     document.getElementById("cc").append(p,btn)
   }else{
-    bcart.map(function(elem,idx){
-      var div1 = document.createElement("div")
-      div1.style.display = "flex"
-      var img = document.createElement("img")
-      img.setAttribute("src",elem.img)
+    boatcart.map(function(elem,idx){
+      document.getElementById("cc").style.justifyContent = "flex-start"
+      // ITEM CONTAINER
+      var icontainer = document.createElement("div")
+      icontainer.style.borderBottom = "1px solid lightgray"
+      icontainer.style.display = "flex"
+      icontainer.classList.add("icontain")
+      var img1 = document.createElement("img")
+      img1.setAttribute("src",elem.img)
+      img1.style.width = "92px"
       var idiv1 = document.createElement("div")
       var p1 = document.createElement("p")
-      p.textContent = elem.name
-      var idiv2 = document.createElement("div")
+      p1.textContent = elem.name
       var p2 = document.createElement("p")
+      p2.innerHTML = "₹"+elem.price + " <span>" +"₹"+ elem.ogprice + "</span>"
       var p3 = document.createElement("p")
-      
+      var span1 = document.createElement("span")
+      span1.textContent = "-"
+      span1.addEventListener("click",function(){
+        if(elem.quan>1){
+          elem.quan--
+          localStorage.setItem("boat-cart",JSON.stringify(boatcart))
+          updateCart()
+        }
+      })
+      var span2 = document.createElement("span")
+      span2.textContent = elem.quan
+      var span3 = document.createElement("span")
+      span3.textContent = "+"
+      span3.addEventListener("click",function(){
+          elem.quan++
+          localStorage.setItem("boat-cart",JSON.stringify(boatcart))
+          updateCart()
+      })
+      p3.append(span1,span2,span3)
+      idiv1.append(p1,p2,p3)
+      var img2 = document.createElement("img")
+      img2.setAttribute("src","https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Group_1_93145e45-8530-46aa-9fb8-6768cc3d80d2.png?v=1633783107")
+      img2.style.width = "16px"
+      img2.style.height = "16px"
+      img2.addEventListener("click",function(){
+        boatcart = boatcart.filter(function(e,i){
+          return idx!=i
+        })
+        localStorage.setItem("boat-cart",JSON.stringify(boatcart)) 
+        updateCart()
+      })
+      icontainer.append(img1,idiv1,img2)
 
-      var div2 = document.createElement("div")
-      var div3 = document.createElement("div")
+      document.getElementById("cc").append(icontainer)
     })
   }
-  document.getElementById("itemcount").textContent = bcart.length
+  document.getElementById("itemcount").textContent = boatcart.length
+
+  // PRICE AND TOTAL DIV
+  document.getElementById("cctotal").textContent = ""
+  var div = document.createElement("div")
+
+  var pdiv1 = document.createElement("div")
+  var pp1 = document.createElement("p")
+  pp1.textContent = "Shipping:"
+  var pp2 = document.createElement("p")
+  pp2.textContent = "FREE"
+  var pdiv2 = document.createElement("div")
+  var pp3 = document.createElement("p")
+  pp3.textContent = "Total:"
+  var pp4 = document.createElement("p")
+  var sum = boatcart.reduce(function(acc,ce){
+    var total = parseInt((ce.price).split(",").join("")) * parseInt(ce.quan)
+    return acc + total
+  },0)
+  pp4.textContent =  "₹" + sum
+  console.log(sum)
+  pdiv1.append(pp1,pp2)
+  pdiv2.append(pp3,pp4)
+
+  var a1 = document.createElement("a")
+  a1.textContent = "Continue Shopping >"
+  a1.setAttribute("href","index.html")
+  var btn1 = document.createElement("button")
+  btn1.textContent = "PLACE ORDER"
+  div.append(pdiv1,pdiv2,a1,btn1)
+
+  document.getElementById("cctotal").append(div)
+}
+
+// dropdown categories redirects
+
+function goToWL(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/true-wireless-earbuds";
+}
+
+function goToWH(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/bluetooth-wireless-headphones"
+}
+
+function goToW(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/smart-watches"
+}
+
+function goToBW(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/wired-headphones"
+}
+
+function goToSS(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/bluetooth-speakers"
+}
+
+function goToAH(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/home-audio"
+}
+
+function goToMA(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/mobile-accessories"
+}
+
+function goToW(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/trebel-for-women"
+}
+
+function goToLE(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/limited-edition"
+}
+
+function goToT(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/misfit-by-boat"
+}
+
+function goToIG(){
+  window.location.href = "https://www.boat-lifestyle.com/collections/immortal-gaming"
 }

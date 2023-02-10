@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cart-panel">
+    <div class="cart-panel" id="ccpanel">
         <div id="carttop">
             <p>Your Cart(<span id="itemcount">1</span> items)</p>
             <button id="close-panel">
@@ -28,6 +28,9 @@
         </div>
         <div class="cart-content" id="cc">
             
+        </div>
+        <div id="cctotal">
+
         </div>
     </div>
     <header>
@@ -44,47 +47,47 @@
                     <a href="#" onclick="showDiv()" class="dropbtn">CATEGORIES</a>
                     <i class="fa-solid fa-chevron-down"></i>
                     <div id="myDropdown" class="dropdown-content">
-                        <div>
+                        <div onclick="goToWL()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_100x.png?v=1663752600" alt="">
                             <p>Airdopes True Wireless</p>
                         </div>
-                        <div>
+                        <div onclick="goToWH()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_100x.png?v=1663752867" alt="">
                             <p>Rockerz Wireless</p>
                         </div>
-                        <div>
+                        <div onclick="goToW()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_100x.jpg?v=1675683311" alt="">
                             <p>Smart Watches</p>
                         </div>
-                        <div>
+                        <div onclick="goToBW()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_100x.png?v=1663753167" alt="">
                             <p>Bassheads Wired</p>
                         </div>
-                        <div>
+                        <div onclick="goToSS()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_100x.png?v=1663753243" alt="">
                             <p>Stone Speakers</p>
                         </div>
-                        <div>
+                        <div onclick="goToAH()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_100x.png?v=1663753280" alt="">
                             <p>Aavante Home Audio</p>
                         </div>
-                        <div>
+                        <div onclick="goToMA()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_100x.jpg?v=1675683444" alt="">
                             <p>Mobile Accessories</p>
                         </div>
-                        <div>
+                        <div onclick="goToW()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_100x.png?v=1675683871" alt="">
                             <p>Trebel for Women</p>
                         </div>
-                        <div>
+                        <div onclick="goToLE()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_100x.png?v=1675683940" alt="">
                             <p>Limited Edition</p>
                         </div>
-                        <div>
+                        <div onclick="goToT()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_100x.png?v=1663753379" alt="">
                             <p>Misfit Trimmers</p>
                         </div>
-                        <div>
+                        <div onclick="goToIG()">
                             <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_100x.png?v=1663753419" alt="">
                             <p>Immortal Gaming</p>
                         </div>
@@ -96,9 +99,10 @@
                     <a href="#">MORE</a>
                     <i class="fa-solid fa-chevron-down"></i>
                     <div class="dropdown-content2">
-                        <a href="#">Do What Floats Your boAt</a>
-                        <a href="#">Blogs</a>
-                        <a href="#">Corporate Orders</a>
+                        <a href="advertise.html">Do What Floats Your boAt</a>
+                        <a href="blogs.html
+                        ">Blogs</a>
+                        <a href=" bulkorder.html">Corporate Orders</a>
                         <a href="">Earn ₹100</a>
                         <a href="">Careers</a>
                         <a href="">Social Responsibility</a>
@@ -109,7 +113,11 @@
             <div>
                 <i class="fa-solid fa-magnifying-glass" id="errspan"></i>
                 <input type="text" placeholder="Search">
-                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Profile-1.png?v=1663762989" alt="profile">
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Profile-1.png?v=1663762989" alt="profile" onclick="showLogin()">
+                <div class="show2">
+                    <p>Hi boAthead!</p>
+                    <a href="login.html">Login</a>
+                </div>
                 <img class="toggle-btn" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Cart_7e68f099-c0bf-4966-a9ef-14d1a3af07ad.png?v=1673260730" alt="cart" id="open-panel"> 
             </div>
         </div>
@@ -145,6 +153,12 @@
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="https://i.imgur.com/CE4ZSYO.png" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
                 <div class="mySlides fade">
                 <div class="numbertext"></div>
                 <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/wave-beat_desktop-banner_1600x.jpg?v=1675839525" style="width:100%">
@@ -186,6 +200,37 @@
             <p>View All ></p>
             <div id="bestBoat">
 
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/netfix_ui_png_desktop_2_2000x.png?v=1671621660" alt="banner">
+        </div>
+        <div>
+            <span>
+                <p>bo<span style="color:#FF0000">A</span>t Blogs</p>
+                <p>View All ></p>
+            </span>
+            <div id="blogs">
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Aman_Blog_800x.jpg?v=1673507967" alt="">
+                    <a href="https://www.boat-lifestyle.com/blogs/blog/aman-gupta-boat-shark-tank-india">Aman Gupta boAt (Shark Tank India 2) Age, Net worth, Email ID, Education &amp; More
+                    </a>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/blog_2_600x.webp?v=1663587325" alt="">
+                    <a href="https://www.boat-lifestyle.com/blogs/blog/the-ultimate-smartwatch-guide-get-the-world-on-your-wrist">The Ultimate Smartwatch Guide - Get The World On Your Wrist
+                    </a>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/blog_3_600x.webp?v=1663587423" alt="">
+                    <a href="https://www.boat-lifestyle.com/blogs/blog/iconic-meets-iconic-boat-dc-comics-join-hands-to-get-super-amazing-product-range">boAt &amp; DC Comics Join Hands
+                    </a>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/blog_800x.png?v=1675255040" alt="">
+                    <a href="/blogs/blog/always-on-the-client-calls-the-wireless-headphones-that-would-make-your-office-life-comfortable">Always on Client Calls? The Wireless Headphones That Would Make Your Office Life Comfortable!
+                    </a>
+                </div>
             </div>
         </div>
     </div>
