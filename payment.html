@@ -832,11 +832,12 @@ footer hr{
 
         if(name==""||add==""||mnum==""||otp==""||ccn==""||cvv==""){
             alert("Please enter correct details")
-        }
-        if(otp!="7273"){
+        }else if(otp!="7273"){
             alert("wrong OTP")
+        }else{
+            alert("Thank you for the purchase :)")
         }
-        alert("Thank you for the purchase :)")
+        
     }
 
     function tellOTP(){
